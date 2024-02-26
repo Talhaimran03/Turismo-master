@@ -1,0 +1,39 @@
+/* Fonts used in the website */
+@font-face {
+  font-family: "sansation";
+  src: url("../fonts/Sansation-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "sansation";
+  src: url("../fonts/Sansation-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "sansation";
+  src: url("../fonts/Sansation-Light.ttf") format("truetype");
+  font-display: light;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Light.ttf") format("truetype");
+  font-display: swap;
+  font-display: light;
+}

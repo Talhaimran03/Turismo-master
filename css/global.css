@@ -1,0 +1,30 @@
+:root {
+  --green: #4c5e50;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+.description {
+  margin: 3em 0;
+  font-size: 1.2rem;
+  max-width: 55rem;
+  text-align: center;
+
+  position: relative;
+  left: 50%;
+  translate: -50%;
+}
+
+.invert {
+  filter: invert(100);
+}
+
+.hide {
+  display: none;
+}

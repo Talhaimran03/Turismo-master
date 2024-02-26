@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/ajax.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- External resources -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+
+<body onload="load()">
+    <div class="header">
+        <div class="left">
+            <h1 class="title">Turismo</h1>
+            <span class="subtitle">Analisi Turismo 1997-2023</span>
+            <span class="authors">A cura di Garonzi Marcello, Imran Talha, Klein Leon</span>
+            <a href="#grafic">
+                <button>Esplora i dati</button>
+            </a>
+        </div>
+        <div>
+            <img class="invert" src="img/theWorld.png" alt="fine-dust">
+        </div>
+        <p id="resource">Dati forniti dalla BANCA D'ITALIA</p>
+    </div>
+
+    <section id="grafic">
+
+        <!-- Annuale -->
+        <h1 class="title-chart">Movimenti per Anno</h1>
+
+        <div class="select-container">
+            <div class="select">
+                <div style="position: relative;" onclick="toggleOptionAnnuale()">
+                    <input type="text" readonly id="selectAnnuale" value="">
+                    <i id="iconAnnuale" class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="options" id="optionsAnnuale">
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="chartAnnuale"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <!-- Trimestre -->
+        <h1 class="title-chart">Movimenti con dettaglio trimestrale</h1>
+
+        <div class="select-container">
+            <div class="select">
+                <div style="position: relative;" onclick="toggleOptionTrimestre()">
+                    <input type="text" readonly id="selectTrimestre" value="">
+                    <i id="iconTrimestre" class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="options" id="optionsTrimestre">
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="chartTrimestre"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <!-- Saldi Totali -->
+        <h2 class="title-chart">Saldi complessivi per continente</h2>
+
+        <div class="chart-container">
+            <canvas id="balanceChart"></canvas>
+        </div>
+
+        <p class="text">
+            Dal grafico si può vedere che i turisti che spendono più soldi in Italia siano quelli Europei,
+            mentre invece il turismo dall'Africa è quasi assente.
+        </p>
+    </section>
+    <section>
+        <!-- Turismo in Italia -->
+        <h2 class="title-chart">Turismo in Italia</h2>
+
+        <div class="chart-container">
+            <canvas id="italyChart"></canvas>
+        </div>
+
+        <p class="text">
+            Il grafico evidenzia l'importanza del turismo per il bilancio italiano e il suo costante
+            incremento negli ultimi anni, che ne fa un settore strategico da sostenere
+        </p>
+    </section>
+    <section>
+        <!-- Influenza sul PIL 2022 -->
+        <h2 class="title-chart">Influenza sul PIL nel 2022</h2>
+
+        <div class="chart-container">
+            <canvas id="PILChart"></canvas>
+        </div>
+
+        <p class="text" id="pilText">
+            Quest'ultimo grafico evidenzia l'importanza del turismo per il bilancio italiano e il suo costante
+            incremento negli ultimi anni, che ne fa un settore strategico da sostenere
+        </p>
+    </section>
+
+</body>
+
+</html>
